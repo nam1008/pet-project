@@ -1,12 +1,12 @@
 function checkLength(e, minLength) {
   var el, elMsg;
-  el = e.target || e.srcElement;
-  elMsg = document.getElementById("feedback");
-
+//   elMsg = document.getElementById("feedback");
+  el = e.target;
+  elMsg = el.nextElementSibling;
   if (el.value.length < minLength) {
-    elMsg.innerHTML = "Username must be " + minLength + " characters or more";
+    elMsg.textContent = "Error";
   } else {
-    elMsg.innerHTML = "";
+    elMsg.textContent = "";
   }
 }
 
@@ -15,8 +15,8 @@ if (elUsername.addEventListener) {
   // If event listener supported
   elUsername.addEventListener(
     "blur",
-    function (e) {
-      checkLength(e, 5);
+    function (event) {
+      checkLength(event, 5);
     },
     false
   );
