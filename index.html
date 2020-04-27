@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Learn-js</title>
-</head>
-<body>
-    <form action="">
-        <label for="username">Create a username</label><br>
-        <input type="text" id="username" placeholder="Username"><br>
-        <label for="password">Create a password</label><br>
-        <input type="password" id="password" placeholder="Password">
-        <br>
-    </form>
-</body>
+  </head>
+  <body>
+    <div id="page">
+      <form method="post" action="http://www.example.org/register">
+        <label for="username">Create a username: </label>
+        <input type="text" id="username" />
+        <div id="feedback"></div>
+
+        <label for="password">Create a password: </label>
+        <input type="password" id="password" />
+        <div id="feedback"></div>
+
+        <input type="submit" value="sign up" />
+      </form>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
 </html>
