@@ -1,6 +1,6 @@
 function checkLength(e, minLength) {
   var el, elMsg;
-//   elMsg = document.getElementById("feedback");
+  //   elMsg = document.getElementById("feedback");
   el = e.target;
   elMsg = el.nextElementSibling;
   if (el.value.length < minLength) {
@@ -21,3 +21,11 @@ if (elUsername.addEventListener) {
     false
   );
 }
+var elBtn = document.getElementById("btn");
+elBtn.addEventListener(
+  "click",
+  function (e) {
+    e.preventDefault();
+  },
+  false
+);
